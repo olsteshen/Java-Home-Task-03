@@ -16,11 +16,11 @@ public class Main {
         String input2 = scanner.nextLine();
         double value2 = Double.parseDouble(input2);
 
-        double res1 = value1 + value2;
-        double res2 = value1 - value2;
-        double res3 = value1 * value2;
-        double res4 = value1 / value2;
-        double res5 = value1 % value2;
+        double res1 = addValues(value1, value2);
+        double res2 = subtractValues(value1, value2);
+        double res3 = multiplyValues(value1, value2);
+        double res4 = remainderValues(value1, value2);
+        double res5 = modValues(value1, value2);
 
         NumberFormat intFormat = NumberFormat.getIntegerInstance();
 
@@ -29,6 +29,26 @@ public class Main {
         System.out.println("125 * 24 = " + intFormat.format(res3));
         System.out.println("125 / 24 = " + intFormat.format(res4));
         System.out.println("125 mod 24 = " + intFormat.format(res5));
+    }
 
+    public static double addValues(double value1, double value2) {
+        return value1 + value2;
+    }
+
+    public static double subtractValues(double value1, double value2) {
+        return value1 - value2;
+    }
+
+    public static double multiplyValues(double value1, double value2) {
+        return value1 * value2;
+    }
+
+    public static double remainderValues(double value1, double value2) {
+        return value1 / value2;
+    }
+
+    public static double modValues(double value1, double value2) {
+        return value1 % value2;
     }
 }
+
